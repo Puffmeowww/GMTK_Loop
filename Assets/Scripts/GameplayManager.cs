@@ -48,11 +48,13 @@ public class GameplayManager : MonoBehaviour
     private ScrollRect ScrollRect;
     [SerializeField]
     private GameObject TextClickPad;
+    private GameObject currentTextBlock;
 
     private List<string> CurrentStoryTextList;
     private int CurrentLineIndex;
 
     private bool CurrentEnding;
+
 
     /* Gameplay Related */
     public void ResetLevel()
@@ -196,19 +198,30 @@ public class GameplayManager : MonoBehaviour
 
     public void ClickText()
     {
-        //if finish story
-        if (CurrentLineIndex > CurrentStoryTextList.Count - 1)
+        //if finish story && show all text
+        if (CurrentLineIndex > CurrentStoryTextList.Count - 1 && currentTextBlock.GetComponent<TypewriterEffect>().IsAllText())
         {
-            Debug.Log("story finished");
             CurrentLineIndex = 0;
             TextClickPad.SetActive(false);
             ReachEnding();
             return;
         }
 
-        AddLine(CurrentStoryTextList[CurrentLineIndex]);
-        ScrollToBottom();
-        Debug.Log("Click Text");
+        //if all text, load next
+        if(currentTextBlock.GetComponent<TypewriterEffect>().IsAllText())
+        {
+            AddLine(CurrentStoryTextList[CurrentLineIndex]);
+            ScrollToBottom();
+            Debug.Log("Click Text");
+        }
+        //if still loading, show full text
+        else
+        {
+            //show all text
+            currentTextBlock.GetComponent<TypewriterEffect>().StopAllCoroutines();
+            currentTextBlock.GetComponent<TypewriterEffect>().ShowAllText();
+        }
+
     }
 
     public void ReachEnding()
@@ -267,13 +280,16 @@ public class GameplayManager : MonoBehaviour
         }
     }
 
-
     void AddLine(string text)
     {
-
         var go = Instantiate(TextPrefab, Content);
+        currentTextBlock = go;
+
+        go.GetComponent<TypewriterEffect>().StartTypeWriter(text);
+
         var textComp = go.GetComponent<TMP_Text>(); 
         textComp.text = text;
+
         CurrentLineIndex += 1;
         ScrollToBottom();
     }

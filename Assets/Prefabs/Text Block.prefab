@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2596043182352103114}
   - component: {fileID: 6931440298760206948}
   - component: {fileID: 2775573735642459687}
+  - component: {fileID: 8714537501597180545}
   - component: {fileID: 1100822051179332242}
   m_Layer: 5
   m_Name: Text Block
@@ -137,6 +138,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8714537501597180545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617821345990036427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0992311fed8b85745ace84f37f48bb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 0}
+  fullText: 
+  delay: 0.05
 --- !u!114 &1100822051179332242
 MonoBehaviour:
   m_ObjectHideFlags: 0
