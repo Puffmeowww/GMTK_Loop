@@ -317,11 +317,29 @@ public class GameplayManager : MonoBehaviour
 
     public void SetAllButtonText(List<string> sl)
     {
-        for(int i= 0;i<ButtonList.Count;i++)
+        int buttonCount = ButtonList.Count;
+        int slCount = sl.Count;
+
+        if (slCount == buttonCount)
         {
-            //Debug.Log(ButtonList.Count + "&" + sl.Count);
-            ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = sl[i];
+            for (int i = 0; i < buttonCount; i++)
+            {
+                ButtonList[i].SetActive(true);
+                ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = sl[i];
+            }
+            ButtonList[buttonCount - 1].SetActive(true);
         }
+
+        else if (slCount == buttonCount - 1)
+        {
+            for (int i = 0; i < slCount; i++)
+            {
+                ButtonList[i].SetActive(true);
+                ButtonList[i].GetComponentInChildren<TextMeshProUGUI>().text = sl[i];
+            }
+            ButtonList[buttonCount - 1].SetActive(false);
+        }
+
     }
 
     void AddLine(string text)
