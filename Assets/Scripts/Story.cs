@@ -16,5 +16,6 @@ public class Story : ScriptableObject
     public List<String> SuccessStoryText;
     public List<String> FailStoryText;
 
-    public string SuccessText;
+    public string SuccessSentence;
+    public string FailSentence;
 }

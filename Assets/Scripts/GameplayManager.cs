@@ -38,6 +38,10 @@ public class GameplayManager : MonoBehaviour
     private GameObject FailAssets;
     [SerializeField]
     private GameObject SuccessAssets;
+    [SerializeField]
+    private GameObject NPC;
+    [SerializeField]
+    private GameObject NextLevelButton;
 
     [Header("Text Scroll")]
     [SerializeField]
@@ -54,14 +58,23 @@ public class GameplayManager : MonoBehaviour
     private int CurrentLineIndex;
 
     private bool CurrentEnding;
+    [Header("ObtainedText")]
+    [SerializeField]
+    private GameObject ObtainedText;
+    [SerializeField]
+    private List<string> ObtainedTextList;
 
 
     /* Gameplay Related */
     public void ResetLevel()
     {
+        
+        NextLevelButton.SetActive(false);
         //Clear OrderList
         CurrentOrder.Clear();
+        ClearContent();
 
+        ObtainedText.SetActive(false);
         SetAllButtonActive(true);
         ThreadLine.SetActive(false);
         //show instruction
@@ -105,6 +118,9 @@ public class GameplayManager : MonoBehaviour
     {
         //make current button transparent
         ChangeTransparency(ButtonList[ButtonID], 0.5f);
+        ButtonList[ButtonID].GetComponent<Button>().enabled = false;
+
+
         //change thread icons to 100% transparancy
         ChangeTransparency(ThreadIconsInLoop[CurrentOrder.Count], 1f);
         //store order
@@ -113,9 +129,15 @@ public class GameplayManager : MonoBehaviour
         //Check if all orders are made
         if(CurrentOrder.Count == 3)
         {
-            ThreadLine.SetActive(true);
-            StartCoroutine(WaitThenSwitchStory());
+            if(CheckOrder() == 1 || CheckOrder() == 0)
+            {
+                ThreadLine.SetActive(true);
+            }
+            
+            //hide all buttons
+            SetAllButtonActive(false);
 
+            StartCoroutine(WaitThenSwitchStory());
         }
     }
 
@@ -179,8 +201,6 @@ public class GameplayManager : MonoBehaviour
         InstructionText.SetActive(false);
         //hide threads
         ThreadLoop.SetActive(false);
-        //hide all buttons
-        SetAllButtonActive(false);
 
         //show text scroll
         TextScroll.SetActive(true);
@@ -212,7 +232,6 @@ public class GameplayManager : MonoBehaviour
         {
             AddLine(CurrentStoryTextList[CurrentLineIndex]);
             ScrollToBottom();
-            Debug.Log("Click Text");
         }
         //if still loading, show full text
         else
@@ -242,15 +261,25 @@ public class GameplayManager : MonoBehaviour
     {
         //show fail title
         FailAssets.SetActive(true);
-        //cuurent id + 1
-        CurrentStoryId += 1;
+
+        ObtainedText.SetActive(true);
+
+        ObtainedText.GetComponent<TextMeshProUGUI>().text = StoryList[CurrentStoryId].FailSentence;
+        ObtainedTextList.Add(StoryList[CurrentStoryId].FailSentence);
+
+        NextLevelButton.SetActive(true);
     }
     public void ShowSuccessEnding()
     {
         //show success text
         SuccessAssets.SetActive(true);
-        //cuurent id + 1
-        CurrentStoryId += 1;
+
+        ObtainedText.SetActive(true);
+
+        ObtainedText.GetComponent<TextMeshProUGUI>().text = StoryList[CurrentStoryId].SuccessSentence;
+        ObtainedTextList.Add(StoryList[CurrentStoryId].SuccessSentence);
+
+        NextLevelButton.SetActive(true);
     }
 
 
@@ -268,6 +297,10 @@ public class GameplayManager : MonoBehaviour
         foreach(GameObject go in ButtonList)
         {
             go.SetActive(b);
+            if(b)
+            {
+                go.GetComponent<Button>().enabled = true;
+            }
         }
     }
 
@@ -298,6 +331,21 @@ public class GameplayManager : MonoBehaviour
     {
         Canvas.ForceUpdateCanvases(); 
         ScrollRect.verticalNormalizedPosition = 0f;
+    }
+
+    public void ClearContent()
+    {
+        foreach (Transform child in Content)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    public void LoadNextLevel()
+    {
+        //cuurent id + 1
+        CurrentStoryId += 1;
+        ResetLevel();
     }
 
 }
