@@ -54,4 +54,5 @@ MonoBehaviour:
     The act no longer trembles in his hands. It slides in, cold and practiced\u2014
     like lighting a cigarette or locking a door behind him.  Just another night.
     Just another shadow swallowed."
-  SuccessText: good
+  SuccessSentence: A fleeting touch becomes eternity
+  FailSentence: Blood spills without a story

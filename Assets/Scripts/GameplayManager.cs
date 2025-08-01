@@ -64,6 +64,12 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private List<string> ObtainedTextList;
 
+    [Header("Achievement")]
+    [SerializeField]
+    private GameObject AchievementCanvas;
+    [SerializeField]
+    private GameObject AchievementText;
+
 
     /* Gameplay Related */
     public void ResetLevel()
@@ -347,5 +353,22 @@ public class GameplayManager : MonoBehaviour
         CurrentStoryId += 1;
         ResetLevel();
     }
+
+    public void OpenAchievement()
+    {
+        AchievementCanvas.SetActive(true);
+        string fulltext = "";
+        foreach(string s in ObtainedTextList)
+        {
+            fulltext += s;
+            fulltext += "\n";
+        }
+        AchievementText.GetComponent<TextMeshProUGUI>().text = fulltext;
+    }
+    public void CloseAchievement()
+    {
+        AchievementCanvas.SetActive(false);
+    }
+
 
 }
