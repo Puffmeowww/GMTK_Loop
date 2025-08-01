@@ -23,7 +23,9 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private GameObject ThreadLoop;
     [SerializeField]
-    private GameObject ThreadLine;
+    private GameObject ThreadLine_Looped;
+    [SerializeField]
+    private GameObject ThreadLine_NotLooped;
     [SerializeField]
     private List<GameObject> ThreadIconsInLoop;
     [SerializeField]
@@ -82,11 +84,13 @@ public class GameplayManager : MonoBehaviour
 
         ObtainedText.SetActive(false);
         SetAllButtonActive(true);
-        ThreadLine.SetActive(false);
-        //show instruction
-        InstructionText.SetActive(true);
         //show thread loop
         ThreadLoop.SetActive(true);
+        ThreadLine_NotLooped.SetActive(true);
+        ThreadLine_Looped.SetActive(false);
+        //show instruction
+        InstructionText.SetActive(true);
+        
         //hide text scroll
         TextScroll.SetActive(false);
         //Disable text click
@@ -96,7 +100,7 @@ public class GameplayManager : MonoBehaviour
         //make all thread icons to 50% transparency
         foreach(GameObject go in ThreadIconsInLoop)
         {
-            ChangeTransparency(go, 0.5f);
+            ChangeTransparency(go, 0.3f);
         }
         //show buttons
         SetAllButtonActive(true);
@@ -137,7 +141,8 @@ public class GameplayManager : MonoBehaviour
         {
             if(CheckOrder() == 1 || CheckOrder() == 0)
             {
-                ThreadLine.SetActive(true);
+                ThreadLine_NotLooped.SetActive(false);
+                ThreadLine_Looped.SetActive(true);
             }
             
             //hide all buttons
@@ -151,7 +156,7 @@ public class GameplayManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        ThreadLine.SetActive(false);
+        ThreadLine_Looped.SetActive(false);
         switch (CheckOrder())
         {
             case 0:
