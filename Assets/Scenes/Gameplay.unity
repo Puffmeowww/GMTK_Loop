@@ -1104,25 +1104,13 @@ PrefabInstance:
       propertyPath: AchievementCanvas
       value: 
       objectReference: {fileID: 669728022}
-    - target: {fileID: 5480116845405367432, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480116845405367432, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480116845405367432, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6110374089196238585, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6110374089196238585, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000007418644
+      value: -0.0008371721
       objectReference: {fileID: 0}
     - target: {fileID: 7218744970446778122, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
       propertyPath: m_AnchorMax.x
