@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dd91f54883a264aa2cad3b279691c6, type: 3}
   m_Name: Story 2
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   ChoiceTextList:
   - she lefr
   - she stays
   - she did
-  - she nono
+  - gsfdg
   SuccessOrder: 000000000100000002000000
   FailedOrder: 020000000100000000000000
   SuccessStoryText:
