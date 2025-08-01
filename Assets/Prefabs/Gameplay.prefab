@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 7486453775037306718}
   - component: {fileID: 5749543837795795832}
   - component: {fileID: 3936598086588607351}
+  - component: {fileID: 4773439612068425141}
   m_Layer: 5
   m_Name: Fate Knitting Image
   m_TagString: Untagged
@@ -335,6 +336,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4773439612068425141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697158883194891839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f892bce08d0d55f41881996222f77abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 3936598086588607351}
+  fadeDuration: 2
+  waitDuration: 1
+  startAlpha: 0.2
 --- !u!1 &782096043862486573
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +473,7 @@ GameObject:
   - component: {fileID: 5499948381808908848}
   - component: {fileID: 6486764478815817038}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Ahievement Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,7 +559,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 1, g: 0.88706064, b: 0.2688679, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -562,7 +579,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5499948381808908848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3445097340611311394}
+        m_TargetAssemblyTypeName: GameplayManager, Assembly-CSharp
+        m_MethodName: OpenAchievement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1233152538491738928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,6 +1625,8 @@ MonoBehaviour:
   TextClickPad: {fileID: 3719602226064565192}
   ObtainedText: {fileID: 2358594408976020738}
   ObtainedTextList: []
+  AchievementCanvas: {fileID: 0}
+  AchievementText: {fileID: 0}
 --- !u!1 &3060567185573732217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,8 +2887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.906494, y: -194.07465}
-  m_SizeDelta: {x: 771, y: 130.45}
+  m_AnchoredPosition: {x: -219.42957, y: -271.44635}
+  m_SizeDelta: {x: 373, y: 242.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &278095954568905887
 CanvasRenderer:
@@ -2887,10 +2918,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'sddasdasd
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6860d5dd8fbef6c4c950f148ad44a403, type: 2}
+  m_sharedMaterial: {fileID: 5270385852547639179, guid: 6860d5dd8fbef6c4c950f148ad44a403, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3673,7 +3706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0005778414}
+  m_AnchoredPosition: {x: 0, y: -0.00031432736}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8988432616460288036
