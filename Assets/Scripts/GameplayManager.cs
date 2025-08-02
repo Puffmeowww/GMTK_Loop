@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameplayManager : MonoBehaviour
@@ -373,8 +374,20 @@ public class GameplayManager : MonoBehaviour
     public void LoadNextLevel()
     {
         //cuurent id + 1
-        CurrentStoryId += 1;
-        ResetLevel();
+        Debug.Log("Current Story Id" + CurrentStoryId);
+        Debug.Log("StoryList Num" + StoryList.Count);
+
+        if (CurrentStoryId < StoryList.Count-1)
+        {
+            CurrentStoryId += 1;
+            ResetLevel();
+        }
+        else
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
+
+        
     }
 
     public void OpenAchievement()
