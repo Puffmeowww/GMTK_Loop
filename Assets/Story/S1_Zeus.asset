@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd91f54883a264aa2cad3b279691c6, type: 3}
+  m_Name: S1_Zeus
+  m_EditorClassIdentifier: 
+  id: 1
+  ChoiceTextList:
+  - He was hidden.
+  - He noticed something.
+  - The head was severed.
+  SuccessOrder: 010000000000000002000000
+  FailedOrder: 000000000100000002000000
+  SuccessStoryText:
+  - "<b><color=#FFD700><size=120%>He noticed something.</size></color></b> \\n A
+    thread, a fracture\u2014everything left a trace. \\n He, like all boys, tried
+    to decipher the silence in his father\u2019s deep gaze. \\n A friend once told
+    him: \"If you look hard enough, you\u2019ll find a sliver of love behind the
+    sternness.\" \\n So he watched his father in secret. \\n And with pride, he shared
+    his small triumphs, as if laying medals at the feet of a statue. \\n His father\u2019s
+    eyes? Like blades. Sharp. Unyielding. Reflecting nothing but the boy's own trembling
+    reflection. \\n "
+  - "That night, the rain and the knocking never stopped. \\n <b><color=#FFD700><size=120%>He
+    was hidden.</size></color></b> His mother shoved a rag into his mouth. \\n He
+    struggled to breathe. The tears wouldn\u2019t stop. \\n He didn\u2019t understand
+    her actions. \\n Or maybe he did. Maybe he just didn\u2019t want to believe it.
+    \\n But he knew he would believe her. He always would. \\n He begged, for everything
+    to end, end quickly."
+  - "When at last the silence held only the rain. \\n He was met by bloodstains,
+    and a mother unrecognizable. \\n His father sat, stunned, on the floor. \\n For
+    the first time, he saw his father\u2014 so small, so fragile."
+  - "<b><color=#FFD700><size=120%>The head was severed.</size></color></b> \\n He
+    threw the axe to the ground, and left the village forever. \\n The one who cut
+    off his father\u2019s head feared nothing anymore. He walked away, like a hero."
+  - Twenty years later, he was defeated once again. \n His wife, meek and quiet,
+    prepared the meal in a way that ignited his irritation. \n His daughter had inherited
+    none of his heroic fire so painfully ordinary it made him sick. \n He watched
+    her closely. She tried desperately to hide her fear.
+  - <b><color=#FFD700><size=120%>She noticed something.</size></color></b> \n
+  FailStoryText:
+  - "That night, the rain and the knocking never stopped. \\n <b><color=#FFD700><size=120%>He
+    was hidden.</size></color></b> His mother shoved a rag into his mouth. \\n He
+    struggled to breathe. The tears wouldn\u2019t stop. \\n He didn\u2019t understand
+    her actions. \\n Or maybe he did. Maybe he just didn\u2019t want to believe it.
+    \\n But he knew he would believe her. He always would. \\n He begged, for everything
+    to end, end quickly. "
+  - "His mother made no sound\u2014 perhaps afraid he'd hear. \\n All he heard was
+    fists pounding hard against something. One hit.\\n Then another.\\n Then another.\\n
+    Sharp, unending. \\n His mouth burned with sourness, saliva and tears soaking
+    the rag stuffed inside. \\n He struggled violently. \\n The wooden crate thumped
+    and clattered,\\n masking the footsteps drawing near. "
+  - "His father had already stepped into the storage room, <b><color=#FFD700><size=120%>he
+    noticed something.</size></color></b> \\n His hands were stained with blood,
+    veins bulging like rivers beneath fragile skin. \\n Mother was gone\u2014 no
+    trace, no sound. \\n He tried to plead with his eyes. \\n But his father only
+    lifted the axe resting nearby, and then\u2014"
+  - <b><color=#FFD700><size=120%>The head was severed.</size></color></b> \n
+  SuccessSentence: None can flee the threads of fate.
+  FailSentence: The fire of wrath cannot burn the threads of fate.

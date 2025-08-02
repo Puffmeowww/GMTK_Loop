@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8dd91f54883a264aa2cad3b279691c6, type: 3}
+  m_Name: S2_Poseidon
+  m_EditorClassIdentifier: 
+  id: 2
+  ChoiceTextList:
+  - She made this place beautiful and fertile.
+  - He made this place beautiful and fertile.
+  - He burned down the village.
+  - He lost to her.
+  SuccessOrder: 030000000200000000000000
+  FailedOrder: 030000000200000001000000
+  SuccessStoryText:
+  - "He never liked her. \\n She smiled at everyone, gave flowers to the old, snacks
+    to the children. \\n Bribery, he thought, with a sneer. \\n Sometimes, she would
+    greet him. \u201CHi, the weather's nice today, perfect for a walk, isn't it?\u201D "
+  - He hated her, hated her with a burning, reckless fury. \n Since he could think,
+    he had devoured books and poems, believed he was destined for greatness. \n And
+    her? She was nothing but a village girl. \n Probably couldn't count past the
+    number of pigs in her family's pen.
+  - 'At the campaign rally, <b><color=#1E90FF><size=120%>he actually lost to her.
+    </size></color></b> \n She walked toward him, bathed in cheers, smiling as she
+    spoke. \n Her smile burned into his eyes. '
+  - 'He couldn''t remember what she said, only the faces mocking him. \n People drank
+    the new brew to celebrate, and he drowned his days in whiskey. \n Those fools
+    will burn in hell, he thought. '
+  - 'He stumbled through the alleys late at night, since this place was clearly hell,
+    but somehow didn''t look like hell. He decided to add the flames. \n <b><color=#1E90FF><size=120%>He
+    burned down the village. </size></color></b> \n The fire swallowed everything,
+    and he laughed madly among the blaze, like a devil risen from hell itself. '
+  - 'The village rose again from the ashes. \n The fallen houses were lifted by her
+    strong arms, and the people''s smiles saved by her haunting songs. \n <b><color=#1E90FF><size=120%>She
+    made this place beautiful and fertile. </size></color></b> '
+  - "No one knew it was him. \\n People only called him a madman. He laughed loudly,
+    telling everyone he set the fire, but they just drove him away with disgust.
+    \\n He knew no one would ever see him again, never witness his poems, his strategies,
+    his arts and letters. \\n <b><color=#1E90FF><size=120%>He had lost to her\u2014forever.
+    </size></color></b> "
+  FailStoryText:
+  - "He never liked her. \\n She smiled at everyone, gave flowers to the old, snacks
+    to the children. \\n Bribery, he thought, with a sneer. \\n Sometimes, she would
+    greet him. \u201CHi, the weather's nice today, perfect for a walk, isn't it?\u201D "
+  - He hated her, hated her with a burning, reckless fury. \n Since he could think,
+    he had devoured books and poems, believed he was destined for greatness. \n And
+    her? She was nothing but a village girl. \n Probably couldn't count past the
+    number of pigs in her family's pen.
+  - At the campaign rally, <b><color=#1E90FF><size=120%>he actually lost to her.
+    </size></color></b> \n She walked toward him, bathed in cheers, smiling as she
+    spoke. \n Her smile burned into his eyes.
+  - He couldn't remember what she said, only the faces mocking him. \n People drank
+    the new brew to celebrate, and he drowned his days in whiskey. \n Those fools
+    will burn in hell, he thought.
+  - He stumbled through the alleys late at night, since this place was clearly hell,
+    but somehow didn't look like hell. He decided to add the flames. \n <b><color=#1E90FF><size=120%>He
+    burned down the village. </size></color></b> \n The fire swallowed everything,
+    and he laughed madly among the blaze, like a devil risen from hell itself.
+  - 'She was dead. Or rather...missing. \n People refused to face the truth: that
+    their bright, lively mayor could be gone. So they built her a new house. \n He
+    finally became a great man, a man of honor. <b><color=#1E90FF><size=120%>He made
+    this place beautiful and fertile. </size></color></b> \n When people looked at
+    him, they only sighed.'
+  SuccessSentence: Jealousy shall lay waste to all that is holy.
+  FailSentence: The maddened waves bring torment upon mankind.

@@ -380,6 +380,22 @@ PrefabInstance:
       propertyPath: AchievementCanvas
       value: 
       objectReference: {fileID: 669728022}
+    - target: {fileID: 3445097340611311394, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
+      propertyPath: StoryList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445097340611311394, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
+      propertyPath: 'StoryList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ac01785d7db0ef428a915c215658d4f, type: 2}
+    - target: {fileID: 3445097340611311394, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
+      propertyPath: 'StoryList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 89cf672a89fab6546b68cc9fe2861d4e, type: 2}
+    - target: {fileID: 3445097340611311394, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
+      propertyPath: 'StoryList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 89cf672a89fab6546b68cc9fe2861d4e, type: 2}
     - target: {fileID: 5480116845405367432, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -398,7 +414,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6110374089196238585, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000004261732
+      value: 0.000019903846
       objectReference: {fileID: 0}
     - target: {fileID: 7218744970446778122, guid: 6b9d6ea9864bdec409788e3f98f8a015, type: 3}
       propertyPath: m_AnchorMax.x
